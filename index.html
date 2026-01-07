@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden selection:bg-emerald-900 selection:text-emerald-100 scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costa Rica Trips green | Eco-Luxury Expeditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --jungle-dark: #031510;
+            --natural-white: #fcfaf7;
+            --emerald-lux: #059669;
+            --forest-deep: #064e3b;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--natural-white);
+            color: var(--jungle-dark);
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .transition-lux { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        
+        .grid-dots {
+            background-image: radial-gradient(rgba(6, 78, 59, 0.08) 1.5px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .mask-gradient-b {
+          mask-image: linear-gradient(to bottom, black, transparent);
+          -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+        }
+        
+        .mask-gradient-t {
+          mask-image: linear-gradient(to top, black, transparent);
+          -webkit-mask-image: linear-gradient(to top, black, transparent);
+        }
+
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1.05); }
+            50% { transform: scale(1.08); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-subtle 15s ease-in-out infinite;
+            will-change: transform;
+        }
+        
+        .stagger-in > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: staggerIn 1s forwards cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .stagger-in > *:nth-child(1) { animation-delay: 0.2s; }
+        .stagger-in > *:nth-child(2) { animation-delay: 0.4s; }
+        .stagger-in > *:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes staggerIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #064e3b;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+
+        #root { min-height: 100vh; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@0.454.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+    <!-- SCRIPT DE ENTRADA AÑADIDO: VITAL PARA QUE CARGUE LA PÁGINA -->
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
